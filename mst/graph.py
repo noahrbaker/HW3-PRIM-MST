@@ -21,7 +21,7 @@ class Graph:
             raise TypeError('Input must be a valid path or an adjacency matrix')
         
         # added to account for empty inputs
-        if self.adj_mat == np.array([]):
+        if self.adj_mat.size == 0:
             raise ValueError('adjacency matrix input cannot be empty')
         
         self.mst = None
