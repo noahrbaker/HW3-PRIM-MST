@@ -51,7 +51,7 @@ def check_mst(adj_mat: np.ndarray,
     if tups != None:
         # add in node 0 since it is nver included in the resultant node
         visited_nodes = set([0] + [nodes for _, _, nodes in tups])
-        visited_len = len(tups)
+        visited_len = len(tups) + 1
         assert visited_len == len(visited_nodes), "Some nodes were visited more than once!"
 
 
