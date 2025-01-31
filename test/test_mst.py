@@ -43,14 +43,14 @@ def check_mst(adj_mat: np.ndarray,
     # Are minimum spanning trees always connected?
     if tups != None:
         # add in node 0 since it is nver included in the resultant node
-        visited_nodes = set(0, [nodes for _, _, nodes in tups])
+        visited_nodes = set([0] + [nodes for _, _, nodes in tups])
         all_nodes = set(range(mst.shape[0]))
         assert visited_nodes == all_nodes, "Not all nodes were visited!"
 
     # are any nodes visited more than once?
     if tups != None:
         # add in node 0 since it is nver included in the resultant node
-        visited_nodes = set(0, [nodes for _, _, nodes in tups])
+        visited_nodes = set([0] + [nodes for _, _, nodes in tups])
         visited_len = len(tups)
         assert visited_len == len(visited_nodes), "Some nodes were visited more than once!"
 
